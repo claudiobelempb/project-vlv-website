@@ -1,0 +1,92 @@
+#main_container {
+  display: grid;
+  grid-template-columns:
+    [container-start]
+    1fr
+    [center-start]
+    repeat(10, [col-start] minmax(min-content, 11rem) [col-end])
+    [center-end]
+    1fr
+    [container-end];
+  grid-template-rows: 100vh repeat(8, min-content);
+}
+
+#header_content {
+  background-color: var(--red-500);
+  grid-column: container-start / container-end;
+  background: linear-gradient(var(--red-600), var(--red-600)),
+    url('../../public/img/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#booking_content {
+  background-color: var(--yellow-500);
+  grid-column: center-start / col-end 6;
+}
+
+#booking_date_content {
+  background-color: var(--orange-500);
+  grid-column: col-start 7 / center-end;
+  height: 400px;
+}
+
+#villas_content {
+  background-color: var(--red-500);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
+
+#motto_content {
+  background-color: var(--yellow-500);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
+
+#events_content {
+  background-color: var(--orange-500);
+  grid-column: container-start / col-end 9;
+  height: 400px;
+}
+
+#events_text_content {
+  background-color: var(--red-500);
+  grid-column: col-start 10 / center-end;
+  height: 400px;
+}
+
+#gallery_text_content {
+  background-color: var(--yellow-500);
+  grid-column: center-start / col-end 1;
+  height: 400px;
+}
+
+#gallery_carrousel_content {
+  background-color: var(--orange-500);
+  grid-column: col-start 2 / container-end;
+  height: 400px;
+}
+
+#features_content {
+  background-color: var(--red-500);
+  grid-column: container-start / col-end 9;
+  height: 400px;
+}
+
+#features_text_content {
+  background-color: var(--yellow-500);
+  grid-column: col-start 10 / center-end;
+  height: 400px;
+}
+
+#testimonials_content {
+  background-color: var(--orange-500);
+  grid-column: center-start / center-end;
+  height: 400px;
+}
+
+#footer_content {
+  background-color: var(--red-500);
+  grid-column: container-start / container-end;
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /*Custom Properties*/
+  --max-width: 1100px;
+  --b-radius: 12px;
+  --ffamily-titillium: 'Titillium Web', sans-serif;
+
+  /*Custom Colors*/
+  --red-400: hsla(330, 100%, 23%, 0.55);
+  --red-500: #730039;
+  --red-600: hsla(330, 100%, 23%, 0.85);
+
+  --yellow-400: hsla(45, 100%, 54%, 0.55);
+  --yellow-500: #ffc513;
+  --yellow-600: rgba(255, 196, 19, 0.85);
+
+  --orange-400: hsla(13, 100%, 65%, 0.55);
+  --orange-500: #ff724c;
+  --orange-600: rgba(255, 115, 76, 0.85);
+
+  --gray-400: hsla(39, 56%, 92%, 0.6);
+  --gray-500: #f6eedf;
+  --gray-600: hsla(39, 56%, 92%, 0.85);
+
+  /*Custom Transform Duration*/
+  --transition-duration: 0.3s;
+
+  /*Custom Font Size*/
+  --fsd-xl: calc(2rem + 2vw);
+  --fsd-md: calc(1rem + 1vw);
+  --fsd-sm: calc(0.5rem + 1vw);
+
+  /*Custom Padding*/
+  --ps-xl: 8vh 3vw;
+}
+
+body {
+  font-family: var(--ffamily-titillium);
+  line-height: 1.7;
+  background-color: var(--gray-500);
+}
+
+a:link,
+a:visited {
+  color: var(--gray-500);
+  text-decoration: none;
+  font-size: var(--fsd-sm);
+}
+
+p {
+  color: white;
+  font-size: var(--fsd-md);
+  font-weight: 300;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

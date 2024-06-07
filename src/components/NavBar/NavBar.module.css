@@ -1,0 +1,76 @@
+#nav_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  & input[type='checkbox'] {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 5rem;
+    height: 5rem;
+    /* opacity: 0; */
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  & a:link,
+  & a:visited {
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    position: relative;
+    transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
+    z-index: 1;
+  }
+
+  & li {
+    margin-bottom: 4rem;
+  }
+
+  & svg {
+    font-size: var(--fsd-xl);
+    color: var(--yellow-500);
+  }
+}
+
+.nav_hamburger {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  background-color: var(--yellow-500);
+  z-index: 2;
+
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+
+  display: grid;
+  place-items: center;
+
+  & > div {
+    position: relative;
+    height: 0.3rem;
+    width: 100%;
+    background-color: var(--gray-500);
+
+    display: grid;
+    place-items: center;
+    transition: all var(--transition-duration) ease-in-out;
+  }
+
+  & > div::before,
+  & > div::after {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    width: 60%;
+    height: inherit;
+    background-color: inherit;
+  }
+}
