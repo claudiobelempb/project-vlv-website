@@ -10,9 +10,41 @@
     left: 3rem;
     width: 5rem;
     height: 5rem;
-    /* opacity: 0; */
+    opacity: 0;
     cursor: pointer;
     z-index: 3;
+  }
+
+  & input[type='checkbox']:checked + .nav_hamburger > div {
+    transform: rotate(135deg);
+  }
+
+  & input[type='checkbox']:checked + .nav_hamburger > div::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: rotate(270deg);
+  }
+
+  & input[type='checkbox']:checked + .nav_hamburger > div::after {
+    opacity: 0;
+  }
+
+  & input[type='checkbox']:checked:hover + .nav_hamburger > div {
+    transform: rotate(405deg);
+  }
+
+  & input[type='checkbox']:checked ~ .nav_menu_container {
+    visibility: visible;
+  }
+
+  & input[type='checkbox']:checked ~ .nav_menu_container > div {
+    transform: scale(1);
+    /* transition-duration: 0.5s; */
+  }
+
+  & input[type='checkbox']:checked ~ .nav_menu_container > div > div {
+    opacity: 1;
   }
 
   & a:link,
@@ -20,7 +52,7 @@
     padding: 1rem 2rem;
     border-radius: 0.3rem;
     position: relative;
-    transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
+    transition: all var(--duration) cubic-bezier(1, 0, 0, 1);
     z-index: 1;
   }
 
@@ -61,7 +93,7 @@
 
     display: grid;
     place-items: center;
-    transition: all var(--transition-duration) ease-in-out;
+    transition: all var(--duration) ease-in-out;
   }
 
   & > div::before,
@@ -72,5 +104,73 @@
     width: 60%;
     height: inherit;
     background-color: inherit;
+    z-index: 2;
+  }
+
+  & > div::before {
+    left: 0;
+  }
+
+  & > div::after {
+    top: 1rem;
+    right: 0;
+  }
+}
+
+.nav_menu_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+
+  & > div {
+    background-color: var(--yellow-600);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+  }
+
+  & > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  & ul li a:link,
+  & ul li a:visited {
+    z-index: 5;
+    font-size: var(--fsd-mdx);
+    position: relative;
+  }
+
+  & ul li a:link::before,
+  & ul li a:visited::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scaleY(0);
+    background-color: var(--red-600);
+    transition: transform var(--duration) ease-in-out;
+  }
+
+  & ul li a:hover::before,
+  & ul li a:active::before {
+    transform: scaleY(1);
   }
 }

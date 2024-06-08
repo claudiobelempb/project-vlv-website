@@ -34,11 +34,12 @@
   --gray-600: hsla(39, 56%, 92%, 0.85);
 
   /*Custom Transform Duration*/
-  --transition-duration: 0.3s;
+  --duration: 0.3s;
 
   /*Custom Font Size*/
   --fsd-xl: calc(2rem + 2vw);
   --fsd-md: calc(1rem + 1vw);
+  --fsd-mdx: calc(1.5rem + 0.5vw);
   --fsd-sm: calc(0.5rem + 1vw);
 
   /*Custom Padding*/
