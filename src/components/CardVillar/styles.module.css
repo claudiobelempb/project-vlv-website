@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+  & img {
+    object-fit: cover;
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+.content {
+  position: absolute;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, max-content);
+
+  & h4 {
+    text-transform: uppercase;
+    font-size: var(--lg);
+    color: white;
+  }
+
+  & a {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: var(--red-400);
+  }
+}

@@ -1,8 +1,11 @@
 import { CardDate } from '@/components/CardDate';
+import { CardVillar } from '@/components/CardVillar';
 import { NavBar } from '@/components/NavBar';
 import Link from 'next/link';
 import { FaRegClock, FaSun } from 'react-icons/fa';
 import styles from './page.module.css';
+
+import ImgCardVillar from '../../public/img/Villas/villa-1.jpg';
 
 export default function Home() {
   return (
@@ -25,7 +28,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section id={styles.booking_content}>
+      <section id={styles.booking_container}>
         <h2 className={styles.booking_title}>Discover Serenity</h2>
         <p className={styles.booking_paragraph}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi beatae
@@ -62,7 +65,20 @@ export default function Home() {
       </section>
 
       <section id={styles.villas_content}>
-        <h1>VillasSection</h1>
+        <CardVillar
+          title='Standard Villa'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit, sapiente itaque modi veniam earum at sit iusto explicabo officia! At modi quisquam quae, ad dolorem voluptates!'
+          src={ImgCardVillar}
+          link='#'
+          linkTitulo='Startng at $200.00'
+        />
+        <CardVillar
+          title='Standard Villa'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit, sapiente itaque modi veniam earum at sit iusto explicabo officia! At modi quisquam quae, ad dolorem voluptates!'
+          src={ImgCardVillar}
+          link='#'
+          linkTitulo='Startng at $200.00'
+        />
       </section>
 
       <section id={styles.motto_content}>

@@ -4,7 +4,7 @@
     text-align: center;
     margin-bottom: 3rem;
   }
-  .card_content {
+  & .card_content {
     background-color: var(--yellow-500);
     padding: 2rem 4rem;
     position: relative;
@@ -46,6 +46,29 @@
       top: -8px;
       transform: rotate(135deg);
       z-index: -1;*/
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    & .card_content {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: min-content;
+      padding: 2rem;
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    & .card_content {
+      grid-template-columns: min-content;
+      padding: 2rem;
+      gap: 1rem;
+
+      & svg {
+        width: 2rem;
+        height: 2rem;
+        color: white;
+      }
     }
   }
 }
