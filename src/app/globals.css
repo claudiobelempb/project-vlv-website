@@ -38,12 +38,23 @@
 
   /*Custom Font Size*/
   --fsd-xl: calc(2rem + 2vw);
-  --fsd-md: calc(1rem + 1vw);
+  --fsd-large: calc(4rem + 4vw);
+  --fsd-medium: calc(2rem + 2vw);
+  --fsd-small: calc(0.5rem + 1vw);
+  --fsd-smallx1: calc(1rem + 2vw);
+  --fsd-smallx2: calc(2.5rem + 1.5vw);
+  --fsd-xx: calc(4rem + 4vw);
   --fsd-mdx: calc(1.5rem + 0.5vw);
   --fsd-sm: calc(0.5rem + 1vw);
+  --lg: calc(2rem + 2vw);
+  --lgx2: calc(4rem + 4vw);
+  --md: calc(1rem + 1vw);
+  --sm: calc(0.5rem + 1vw);
 
   /*Custom Padding*/
   --ps-xl: 8vh 3vw;
+  --px2: 2vh 2vw 6vw calc(2rem + 2vw);
+  --pdx1: calc(1rem + 2vw);
 }
 
 body {
@@ -56,12 +67,12 @@ a:link,
 a:visited {
   color: var(--gray-500);
   text-decoration: none;
-  font-size: var(--fsd-sm);
+  font-size: var(--md);
 }
 
 p {
   color: white;
-  font-size: var(--fsd-md);
+  font-size: var(--md);
   font-weight: 300;
 }
 
@@ -76,4 +87,11 @@ button {
 [disabled] {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+@media screen and (max-width: 1000px) {
+  a:link,
+  a:visited {
+    font-size: var(--sm);
+  }
 }

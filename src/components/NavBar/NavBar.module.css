@@ -115,6 +115,20 @@
     top: 1rem;
     right: 0;
   }
+
+  animation: container-nav 2s;
+}
+
+@keyframes container-nav {
+  0% {
+    transform: translateX(150rem) rotate(1800deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
 }
 
 .nav_menu_container {

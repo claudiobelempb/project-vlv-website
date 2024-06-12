@@ -11,7 +11,7 @@
   grid-template-rows: 100vh repeat(8, min-content);
 }
 
-#header_content {
+#header_container {
   background-color: var(--red-500);
   grid-column: container-start / container-end;
   background: linear-gradient(var(--red-600), var(--red-600)),
@@ -19,17 +19,183 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  & .header_logo_content {
+    display: grid;
+    grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
+    grid-template-rows: min-content;
+    height: 90%;
+    justify-items: center;
+    & .header_logo_link {
+      grid-column: 2 / 3;
+      letter-spacing: 0.2rem;
+
+      & span {
+        color: var(--orange-500);
+        font-size: 3rem;
+        font-family: 'Times New Roman', Times, serif;
+      }
+    }
+  }
+
+  & .header_content {
+    grid-column: 1 / -1;
+    align-self: center;
+    & .header_title {
+      font-size: var(--fsd-xx);
+      font-weight: 300;
+      color: white;
+      text-transform: uppercase;
+      padding: 0 2rem 0 var(--fsd-xl);
+    }
+    & .header_paragraph {
+      font-size: var(--fsd-smallx1);
+      font-weight: 500;
+      padding: var(--px2);
+    }
+    & .header_link:link,
+    & .header_link:visited {
+      position: relative;
+      margin-left: var(--pdx1);
+      padding: 1.5rem;
+      border: 1px solid var(--orange-500);
+      z-index: 1;
+    }
+
+    & .header_link:link::before,
+    & .header_link:visited::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--orange-500);
+      transform: scaleX(0);
+      transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+      z-index: -1;
+    }
+
+    & .header_link:hover::before,
+    & .header_link:active::before {
+      transform: scaleX(1);
+    }
+
+    @media screen and (max-width: 600px) {
+      & .header_paragraph {
+        font-size: 2rem;
+      }
+    }
+  }
 }
 
 #booking_content {
-  background-color: var(--yellow-500);
   grid-column: center-start / col-end 6;
+  padding: var(--lg);
+
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  gap: 2vh;
+
+  & .booking_title {
+    font-size: var(--lg);
+    padding: 0 2rem 1rem;
+    font-weight: 300;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 15%;
+      bottom: 0;
+      height: 0.2rem;
+      width: 30%;
+      background-color: var(--yellow-500);
+    }
+  }
+
+  & .booking_paragraph {
+    padding: 2rem;
+    color: var(--red-500);
+  }
+  & .booking_icons_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-left: 2rem;
+    & .booking_icons_content__weather,
+    & .booking_icons_content__time {
+      /* display: flex;
+      align-items: center;
+      gap: 1rem; */
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      grid-template-rows: 10vh;
+      align-items: center;
+      justify-items: flex-start;
+
+      & svg {
+        width: 3rem;
+        height: 3rem;
+        color: var(--yellow-500);
+      }
+
+      & p {
+        color: var(--red-500);
+      }
+    }
+  }
 }
 
-#booking_date_content {
-  background-color: var(--orange-500);
+#booking_date_container {
   grid-column: col-start 7 / center-end;
-  height: 400px;
+  padding: var(--lg);
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  /* background-color: var(--red-400); */
+
+  & .booking_date_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2vw;
+    place-items: center;
+  }
+
+  & .booking_date_contact {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    & a:link,
+    & a:visited {
+      padding: 1rem 2rem;
+      background-color: var(--yellow-500);
+      transition: all var(--duration) ease-in-out;
+      border: 0.1rem transparent solid;
+    }
+
+    & a:hover,
+    & a:active {
+      color: var(--yellow-500);
+      transition: all var(--duration) ease-in-out;
+      background-color: white;
+      border: 0.1rem var(--yellow-500) solid;
+    }
+
+    & p:first-of-type {
+      margin-top: 4rem;
+    }
+
+    & p:first-of-type,
+    & p:nth-of-type(2),
+    & p:nth-of-type(3) {
+      color: var(--red-500);
+      font-size: 2rem;
+    }
+  }
 }
 
 #villas_content {

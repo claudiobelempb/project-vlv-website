@@ -1,0 +1,51 @@
+.card_container {
+  & h5 {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .card_content {
+    background-color: var(--yellow-500);
+    padding: 2rem 4rem;
+    position: relative;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    position: relative;
+
+    & svg {
+      width: 4rem;
+      height: 4rem;
+      color: white;
+    }
+
+    & p:nth-of-type(2) {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    & .card_p {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -1.5rem;
+      border-width: 1.5rem;
+      border-style: solid;
+      border-color: transparent transparent var(--yellow-500);
+
+      /*width: 1.5rem;
+      background-color: var(--yellow-500);
+      height: 1.5rem;
+      top: -8px;
+      transform: rotate(135deg);
+      z-index: -1;*/
+    }
+  }
+}
