@@ -5,7 +5,13 @@ import Link from 'next/link';
 import { FaRegClock, FaSun } from 'react-icons/fa';
 import styles from './page.module.css';
 
-import ImgCardVillar from '../../public/img/Villas/villa-1.jpg';
+import ImgCardVillar01 from '../../public/img/Villas/villa-1.jpg';
+
+import ImgCardVillar02 from '../../public/img/Villas/villa-2.jpg';
+import ImgCardVillar03 from '../../public/img/Villas/villa-3.jpg';
+import ImgCardVillar04 from '../../public/img/Villas/villa-4.jpg';
+import ImgCardVillar05 from '../../public/img/Villas/villa-5.jpg';
+import ImgCardVillar06 from '../../public/img/Villas/villa-6.jpg';
 
 export default function Home() {
   return (
@@ -64,18 +70,46 @@ export default function Home() {
         </div>
       </section>
 
-      <section id={styles.villas_content}>
+      <section id={styles.villas_container}>
         <CardVillar
           title='Standard Villa'
-          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit, sapiente itaque modi veniam earum at sit iusto explicabo officia! At modi quisquam quae, ad dolorem voluptates!'
-          src={ImgCardVillar}
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit'
+          src={ImgCardVillar01.src}
           link='#'
           linkTitulo='Startng at $200.00'
         />
         <CardVillar
           title='Standard Villa'
-          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit, sapiente itaque modi veniam earum at sit iusto explicabo officia! At modi quisquam quae, ad dolorem voluptates!'
-          src={ImgCardVillar}
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit'
+          src={ImgCardVillar02.src}
+          link='#'
+          linkTitulo='Startng at $200.00'
+        />
+        <CardVillar
+          title='Standard Villa'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit'
+          src={ImgCardVillar03.src}
+          link='#'
+          linkTitulo='Startng at $200.00'
+        />
+        <CardVillar
+          title='Standard Villa'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit'
+          src={ImgCardVillar04.src}
+          link='#'
+          linkTitulo='Startng at $200.00'
+        />
+        <CardVillar
+          title='Standard Villa'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit'
+          src={ImgCardVillar05.src}
+          link='#'
+          linkTitulo='Startng at $200.00'
+        />
+        <CardVillar
+          title='Standard Villa'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil aut, suscipit reprehenderit'
+          src={ImgCardVillar06.src}
           link='#'
           linkTitulo='Startng at $200.00'
         />

@@ -1,5 +1,6 @@
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import { ComponentProps } from 'react';
 import styles from './styles.module.css';
 
 type CardVillarProps = {
@@ -8,7 +9,7 @@ type CardVillarProps = {
   src: string | StaticImageData;
   link: string;
   linkTitulo: string;
-};
+} & ComponentProps<'article'>;
 
 export const CardVillar: React.FC<CardVillarProps> = ({
   title,
@@ -17,11 +18,16 @@ export const CardVillar: React.FC<CardVillarProps> = ({
   link,
   linkTitulo
 }) => {
+  const styling = {
+    backgroundImage: `linear-gradient(var(--red-400), var(--yellow-400)), url('${src}')`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover'
+  };
   return (
-    <article className={styles.container}>
-      <Image src={src} alt='' />
+    <article className={styles.container} style={styling}>
+      {/* <Image src={src} alt='' /> */}
       <div className={styles.content}>
-        <h4>{title}</h4>
+        <h2>{title}</h2>
         <p>{description}</p>
         <Link href={link}>{linkTitulo}</Link>
       </div>

@@ -231,11 +231,16 @@
   }
 }
 
-#villas_content {
-  /* background-color: var(--red-500); */
+#villas_container {
   grid-column: container-start / container-end;
   /* height: 400px; */
-  padding: var(--lg);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem;
+
+  @media screen and (max-width: 800px) {
+    gap: 0;
+  }
 }
 
 #motto_content {
