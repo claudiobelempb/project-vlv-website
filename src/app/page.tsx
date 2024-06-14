@@ -115,8 +115,14 @@ export default function Home() {
         />
       </section>
 
-      <section id={styles.motto_content}>
-        <h1>Motton Section</h1>
+      <section id={styles.motto_container}>
+        <h2>We Reimagined Luxury</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
+          optio aliquid, ducimus placeat autem ipsum voluptates delectus
+          dignissimos veniam molestiae, odio voluptate, animi fugiat! Veniam
+          officiis non reiciendis recusandae ipsa!
+        </p>
       </section>
 
       <section id={styles.events_content}>
