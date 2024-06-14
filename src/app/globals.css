@@ -48,6 +48,7 @@
   --fsd-sm: calc(0.5rem + 1vw);
   --lg: calc(2rem + 2vw);
   --lgx2: calc(4rem + 4vw);
+  --lgx3: 10vw 3vw;
   --md: calc(1rem + 1vw);
   --sm: calc(0.5rem + 1vw);
 
