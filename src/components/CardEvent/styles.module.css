@@ -1,0 +1,29 @@
+#container {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'para';
+  row-gap: 4vw;
+  align-items: center;
+  justify-items: start;
+  padding: var(--lg);
+
+  & h2 {
+    grid-area: title;
+    font-size: var(--lg);
+    font-weight: 400;
+    color: white;
+  }
+
+  & p {
+    grid-area: para;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 600px) {
+    & p {
+      font-size: 1.5rem;
+    }
+  }
+}
