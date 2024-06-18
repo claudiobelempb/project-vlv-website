@@ -7,6 +7,10 @@ import styles from './page.module.css';
 
 import ImgCardVillar01 from '../../public/img/Villas/villa-1.jpg';
 
+import { CardDefault } from '@/components/CardDefaultProps';
+import { CardEvent } from '@/components/CardEvent';
+import ImgEvent01 from '../../public/img/Events/beach-party.jpg';
+import ImgEvent02 from '../../public/img/Events/culture-discovery.jpg';
 import ImgCardVillar02 from '../../public/img/Villas/villa-2.jpg';
 import ImgCardVillar03 from '../../public/img/Villas/villa-3.jpg';
 import ImgCardVillar04 from '../../public/img/Villas/villa-4.jpg';
@@ -125,16 +129,25 @@ export default function Home() {
         </p>
       </section>
 
-      <section id={styles.events_content}>
-        <h1>Events Section</h1>
+      <section id={styles.events_container}>
+        <CardEvent
+          title='Beach Party'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet culpa molestiae natus, blanditiis nemo ipsum eaque aperiam quos assumenda ullam maiores, temporibus enim, nesciunt ea possimus in vero similique dolore.'
+          src={ImgEvent01.src}
+        />
+        <CardEvent
+          title='Beach Party'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet culpa molestiae natus, blanditiis nemo ipsum eaque aperiam quos assumenda ullam maiores.'
+          src={ImgEvent02.src}
+        />
       </section>
 
-      <section id={styles.events_text_content}>
-        <h1>Events Text Section</h1>
+      <section id={styles.events_text_container}>
+        <CardDefault position title='Events' color='white' bgcolor='#ff724c' />
       </section>
 
       <section id={styles.gallery_text_content}>
-        <h1>Gallery Text Section</h1>
+        <CardDefault title='Gallety' color='white' bgcolor='#ff724c' />
       </section>
 
       <section id={styles.gallery_carrousel_content}>
