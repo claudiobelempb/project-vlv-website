@@ -317,16 +317,25 @@
   }
 }
 
-#gallery_text_content {
+#gallery_text_container {
   background-color: var(--yellow-500);
   grid-column: center-start / col-end 1;
-  height: 400px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
-#gallery_carrousel_content {
-  background-color: var(--red-500);
+#gallery_carrousel_container {
   grid-column: col-start 2 / container-end;
-  height: 400px;
+  height: 50vh;
+  overflow: hidden;
+  border: solid 0.2rem var(--yellow-500);
+  position: relative;
+
+  @media screen and (max-width: 600px) {
+    grid-column: col-start / container-end;
+  }
 }
 
 #features_content {
