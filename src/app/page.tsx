@@ -9,6 +9,7 @@ import ImgCardVillar01 from '../../public/img/Villas/villa-1.jpg';
 
 import { CardDefault } from '@/components/CardDefaultProps';
 import { CardEvent } from '@/components/CardEvent';
+import { CarouselItemProps, CarouselRoot } from '@/components/CarouselRoot';
 import ImgEvent01 from '../../public/img/Events/beach-party.jpg';
 import ImgEvent02 from '../../public/img/Events/culture-discovery.jpg';
 import ImgCardVillar02 from '../../public/img/Villas/villa-2.jpg';
@@ -16,6 +17,30 @@ import ImgCardVillar03 from '../../public/img/Villas/villa-3.jpg';
 import ImgCardVillar04 from '../../public/img/Villas/villa-4.jpg';
 import ImgCardVillar05 from '../../public/img/Villas/villa-5.jpg';
 import ImgCardVillar06 from '../../public/img/Villas/villa-6.jpg';
+
+import ImgCarousel01 from '../../public/img/Gallery/gallery-1.jpg';
+import ImgCarousel010 from '../../public/img/Gallery/gallery-10.jpg';
+import ImgCarousel02 from '../../public/img/Gallery/gallery-2.jpg';
+import ImgCarousel03 from '../../public/img/Gallery/gallery-3.jpg';
+import ImgCarousel04 from '../../public/img/Gallery/gallery-4.jpg';
+import ImgCarousel05 from '../../public/img/Gallery/gallery-5.jpg';
+import ImgCarousel06 from '../../public/img/Gallery/gallery-6.jpg';
+import ImgCarousel07 from '../../public/img/Gallery/gallery-7.jpg';
+import ImgCarousel08 from '../../public/img/Gallery/gallery-8.jpg';
+import ImgCarousel09 from '../../public/img/Gallery/gallery-9.jpg';
+
+const imgs: CarouselItemProps[] = [
+  { src: ImgCarousel01, alt: '', current: true },
+  { src: ImgCarousel02, alt: '', current: false },
+  { src: ImgCarousel03, alt: '', current: false },
+  { src: ImgCarousel04, alt: '', current: false },
+  { src: ImgCarousel05, alt: '', current: false },
+  { src: ImgCarousel06, alt: '', current: false },
+  { src: ImgCarousel07, alt: '', current: false },
+  { src: ImgCarousel08, alt: '', current: false },
+  { src: ImgCarousel09, alt: '', current: false },
+  { src: ImgCarousel010, alt: '', current: false }
+];
 
 export default function Home() {
   return (
@@ -146,12 +171,12 @@ export default function Home() {
         <CardDefault position title='Events' color='white' bgcolor='#ff724c' />
       </section>
 
-      <section id={styles.gallery_text_content}>
-        <CardDefault title='Gallety' color='white' bgcolor='#ff724c' />
+      <section id={styles.gallery_text_container}>
+        <CardDefault title='Gallety' color='white' bgcolor='#730039' />
       </section>
 
-      <section id={styles.gallery_carrousel_content}>
-        <h1>Gallery Carrousel Section</h1>
+      <section id={styles.gallery_carrousel_container}>
+        <CarouselRoot imgs={imgs} items={imgs.length} />
       </section>
 
       <section id={styles.features_content}>
